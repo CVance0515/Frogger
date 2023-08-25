@@ -5,9 +5,9 @@ public class Frog{
   private static final double FROG_HEIGHT = 48;
 
   public Frog(Image i, DrawingCanvas c){
-    frogImage = new VisibleImage(i, new Location(10,10), c);
+    frogImg = new VisibleImage(i, new Location(10,10), c);
   }
-  public boolean overlapsw(VisibleImg vehicleImage){
-    return 
+  public boolean overlaps(VisibleImg vehicleImg){
+    return frogImg.overlapsWith(vehicleImg);
   }
 }
