@@ -1,7 +1,7 @@
 import objectdraw.*;
 import java.awt.*;
 
-public class Frogger extends WindowController implements KeyListener{
+public class Main extends WindowController implements KeyListener{
 
    // Constants defining the sizes of the background components.
    private static final double HIGHWAY_LENGTH = 700;
@@ -25,7 +25,7 @@ public class Frogger extends WindowController implements KeyListener{
    // instructions to create the frog and the Lane ActiveObjects.
    
    public static void main(String[] args) { 
-   new Frogger().startController(400,400); 
+   new Main().startController(400,400); 
 	} 
    
    public void begin()
