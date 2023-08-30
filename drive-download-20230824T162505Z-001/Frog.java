@@ -7,7 +7,7 @@ public class Frog{
   public Frog(Image i, DrawingCanvas c){
     frogImg = new VisibleImage(i, new Location(10,10), c);
   }
-  public boolean overlaps(VisibleImg vehicleImg){
+  public boolean overlaps(VisibleImage vehicleImg){
     return frogImg.overlapsWith(vehicleImg);
   }
 }
