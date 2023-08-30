@@ -1,5 +1,5 @@
 import objectdraw.*;
-import java.awt*;
+import java.awt.*;
 public class Frog{
   private VisibleImage frogImg;
   private static final double FROG_HEIGHT = 48;
