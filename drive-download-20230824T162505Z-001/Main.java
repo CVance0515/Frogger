@@ -1,5 +1,7 @@
 import objectdraw.*;
-import java.awt.*;
+import java.awt.event.*;
+import java.awt.Color;
+
 
 public class Main extends WindowController implements KeyListener{
 
@@ -95,5 +97,16 @@ public class Main extends WindowController implements KeyListener{
    {
    
    }
-         
+
+  public void	keyPressed(KeyEvent e) {
+          
+  }
+        
+  public void	keyReleased(KeyEvent e) {
+          
+  }
+        
+  public void	keyTyped(KeyEvent e) {
+          
+  }         
 }
