@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.awt.Color;
 import java.awt.Image;
 
-public class Frog{
+public class Frog {
   
   private VisibleImage frogImg;
   private static final double FROG_HEIGHT = 48;

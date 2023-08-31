@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.awt.Color;
 
 
-public class Main extends WindowController implements KeyListener{
+public class Main extends WindowController implements KeyListener {
 
    // Constants defining the sizes of the background components.
    private static final double HIGHWAY_LENGTH = 700;
@@ -25,6 +25,7 @@ public class Main extends WindowController implements KeyListener{
 
   //State variables
   private Frog richard; 
+  private Vehicle car1;
 
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
@@ -60,6 +61,7 @@ public class Main extends WindowController implements KeyListener{
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
      richard = new Frog(getImage("Images/froggy.gif"), canvas);
+     car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas);
            
    }
    
