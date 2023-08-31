@@ -23,8 +23,12 @@ public class Main extends WindowController implements KeyListener{
    private static final double DASH_LENGTH = LANE_WIDTH / 3;
    private static final double DASH_SPACING = DASH_LENGTH / 2;
 
+  //State variables
+  private Frog richard; 
+
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
+  
    
    public static void main(String[] args) { 
    new Main().startController(700,400); 
@@ -55,6 +59,7 @@ public class Main extends WindowController implements KeyListener{
       }
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
+     richard = new Frog(getImage("Images/froggy.gif"), canvas);
            
    }
    
