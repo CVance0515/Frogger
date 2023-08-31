@@ -7,7 +7,7 @@ public class Main extends WindowController implements KeyListener{
 
    // Constants defining the sizes of the background components.
    private static final double HIGHWAY_LENGTH = 700;
-   private static final double LANE_WIDTH = 100;
+   private static final double LANE_WIDTH = 70;
    private static final int NUM_LANES = 4;
    private static final double HIGHWAY_WIDTH = LANE_WIDTH * NUM_LANES;
    private static final double LINE_WIDTH = LANE_WIDTH / 10;
@@ -15,7 +15,7 @@ public class Main extends WindowController implements KeyListener{
    // Constants defining the locations of the background components
    private static final double HIGHWAY_LEFT = 0;
    private static final double HIGHWAY_RIGHT = HIGHWAY_LEFT + HIGHWAY_LENGTH;
-   private static final double HIGHWAY_TOP = 0;
+   private static final double HIGHWAY_TOP = 70;
    private static final double HIGHWAY_BOTTOM = HIGHWAY_TOP + HIGHWAY_WIDTH;
    
    // Constants describing the lines on the highway
