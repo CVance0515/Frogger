@@ -60,9 +60,9 @@ public class Main extends WindowController implements KeyListener {
       }
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
-     richard = new Frog(getImage("Images/froggy.gif"), canvas);
      car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas);
      lily = new Lilypad(getImage("Images/lily.jpg"), canvas, 100);
+     richard = new Frog(getImage("Images/froggy.gif"), canvas);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
@@ -106,7 +106,23 @@ public class Main extends WindowController implements KeyListener {
    }
 
   public void	keyPressed(KeyEvent e) {
-          
+          int key = e.getKeyCode();
+
+    if (key == KeyEvent.VK_LEFT) {
+        richard.hops("left");
+    }
+
+    if (key == KeyEvent.VK_RIGHT) {
+        richard.hops("right");
+    }
+
+    if (key == KeyEvent.VK_UP) {
+        richard.hops("up");
+    }
+
+    if (key == KeyEvent.VK_DOWN) {
+        richard.hops("down");
+    }
   }
         
   public void	keyReleased(KeyEvent e) {

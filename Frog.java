@@ -17,12 +17,12 @@ public class Frog {
   public void hops(String direction){
     if(direction.equals("left")){
       if(frogImg.getX() != 10){
-        frogImg.move(60,0);
+        frogImg.move(-100,0);
       }
     }
     if(direction.equals("right")){
       if(frogImg.getX() != 1000){
-        frogImg.move(-60,0);
+        frogImg.move(100,0);
       }
     }
     if(direction.equals("up")){
