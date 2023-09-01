@@ -14,4 +14,20 @@ public class Frog {
   public boolean overlaps(VisibleImage vehicleImg){
     return frogImg.overlaps(vehicleImg);
   }
+  public void hops(String direction){
+    if(direction="left"){
+      if(frogImg.getX()=10){
+        frogImg.move(60,0);
+      }
+    }
+    if(direction="right"){
+      
+    }
+    if(direction="up"){
+      
+    }
+    if(direction="down"){
+      
+    }
+  }
 }
