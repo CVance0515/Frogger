@@ -7,9 +7,9 @@ public class Lilypad{
   //state variables
   private VisibleImage lilyImg;
   private int lilyX;
-  private int lilyY = 0;
   //Lilypad constructor
-  public Lilypad(Image i, int x, int y){
-    
+  public Lilypad(Image i, DrawingCanvas c, int x){
+    lilyImg = new VisibleImage(i, new Location(x, 10), c);
+    int lilyX = x;
   }
 }
