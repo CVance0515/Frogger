@@ -15,19 +15,25 @@ public class Frog {
     return frogImg.overlaps(vehicleImg);
   }
   public void hops(String direction){
-    if(direction="left"){
-      if(frogImg.getX()=10){
+    if(direction.equals("left")){
+      if(frogImg.getX() != 10){
         frogImg.move(60,0);
       }
     }
-    if(direction="right"){
-      
+    if(direction.equals("right")){
+      if(frogImg.getX() != 1000){
+        frogImg.move(-60,0);
+      }
     }
-    if(direction="up"){
-      
+    if(direction.equals("up")){
+      if(frogImg.getX() != 0){
+        frogImg.move(0,-70);
+      }
     }
-    if(direction="down"){
-      
+    if(direction.equals("down")){
+      if(frogImg.getX() != 500){
+        frogImg.move(0,70);
+      }
     }
   }
 }
