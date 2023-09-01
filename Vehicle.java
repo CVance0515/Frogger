@@ -9,7 +9,7 @@ public class Vehicle {
   private static final double VEHICLE_HEIGHT = 48;
 
   public Vehicle(Image i, DrawingCanvas c){
-    vehicleImg = new VisibleImage(i, new Location(550,100), c);
+    vehicleImg = new VisibleImage(i, new Location(550,70), c);
   }
   /*
   public boolean overlaps(VisibleImage vehicleImg){
