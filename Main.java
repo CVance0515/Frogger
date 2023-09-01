@@ -26,7 +26,7 @@ public class Main extends WindowController implements KeyListener {
   //State variables
   private Frog richard; 
   private Vehicle car1;
-
+  private Lilypad lily;
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
   
@@ -62,7 +62,7 @@ public class Main extends WindowController implements KeyListener {
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
      richard = new Frog(getImage("Images/froggy.gif"), canvas);
      car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas);
-           
+     lily = new Lilypad(getImage("Images/lily.jpg"), canvas, 100);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
