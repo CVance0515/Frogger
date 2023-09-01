@@ -21,17 +21,17 @@ public class Frog {
       }
     }
     if(direction.equals("right")){
-      if(frogImg.getX() != 1000){
+      if(frogImg.getX() != 610){
         frogImg.move(100,0);
       }
     }
     if(direction.equals("up")){
-      if(frogImg.getX() != 0){
+      if(frogImg.getY() != 10){
         frogImg.move(0,-70);
       }
     }
     if(direction.equals("down")){
-      if(frogImg.getX() != 500){
+      if(frogImg.getY() != 360){
         frogImg.move(0,70);
       }
     }
