@@ -7,17 +7,19 @@ public class Lilypad{
   //state variables
   private VisibleImage lilyImg;
   private int lilyX;
-  private Frog Bob;
+  private Frog Richard;
+  private Image lilyF;
   //Lilypad constructor
-  public Lilypad(Image i, DrawingCanvas c, int x, Frog bob){
+  public Lilypad(Image i, Image lilyFrog, DrawingCanvas c, int x, Frog richard){
     lilyImg = new VisibleImage(i, new Location(x, 10), 100, 60, c);
     int lilyX = x;
-    Bob = bob;
+    Richard = richard;
+    lilyF = lilyFrog;
   }
 
-  public void updateLily(Image i, DrawingCanvas c, int x){
-    if(lilyImg.collidesWith(Bob.getVisibleImage())){
-      lilyImg = new VisibleImage(i, new Location(x, 10), 100, 60, c);
+  public void updateLily(DrawingCanvas c, int x){
+    if(lilyImg.overlaps(Richard.getVisibleImage())){
+      lilyImg.setImage(lilyF);
     }
   }
 }
