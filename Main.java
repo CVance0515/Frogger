@@ -61,8 +61,8 @@ public class Main extends WindowController implements KeyListener {
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
      car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas);
-     lily = new Lilypad(getImage("Images/lily.jpg"), canvas, 100, richard);
-     richard = new Frog(getImage("Images/froggy.gif"), canvas);
+     richard = new Frog(getImage("Images/froggy.gif"), canvas);  
+     lily = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 100, richard);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
@@ -110,18 +110,22 @@ public class Main extends WindowController implements KeyListener {
 
     if (key == KeyEvent.VK_LEFT) {
         richard.hops("left");
+        lily.updateLily(canvas, 100);
     }
 
     if (key == KeyEvent.VK_RIGHT) {
         richard.hops("right");
+        lily.updateLily(canvas, 100);
     }
 
     if (key == KeyEvent.VK_UP) {
         richard.hops("up");
+        lily.updateLily(canvas, 100);
     }
 
     if (key == KeyEvent.VK_DOWN) {
         richard.hops("down");
+        lily.updateLily(canvas, 100);
     }
   }
         
