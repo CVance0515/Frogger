@@ -120,7 +120,7 @@ public class Main extends WindowController implements KeyListener {
   public void	keyPressed(KeyEvent e) {
           int key = e.getKeyCode();
 
-    if (key == KeyEvent.VK_LEFT) {
+    if (key == KeyEvent.VK_LEFT || key == KeyEvent.VK_A) {
         richard.hops("left");
         lily1.updateLily(canvas, 0);
         lily2.updateLily(canvas, 100);
@@ -131,7 +131,7 @@ public class Main extends WindowController implements KeyListener {
         lily7.updateLily(canvas, 600);
     }
 
-    if (key == KeyEvent.VK_RIGHT) {
+    if (key == KeyEvent.VK_RIGHT || key == KeyEvent.VK_D) {
         richard.hops("right");
         lily1.updateLily(canvas, 0);
         lily2.updateLily(canvas, 100);
@@ -142,7 +142,7 @@ public class Main extends WindowController implements KeyListener {
         lily7.updateLily(canvas, 600);
     }
 
-    if (key == KeyEvent.VK_UP) {
+    if (key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
         richard.hops("up");
         lily1.updateLily(canvas, 0);
         lily2.updateLily(canvas, 100);
@@ -153,7 +153,7 @@ public class Main extends WindowController implements KeyListener {
         lily7.updateLily(canvas, 600);
     }
 
-    if (key == KeyEvent.VK_DOWN) {
+    if (key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {
         richard.hops("down");
         lily1.updateLily(canvas, 0);
         lily2.updateLily(canvas, 100);
