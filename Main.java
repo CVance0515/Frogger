@@ -26,7 +26,13 @@ public class Main extends WindowController implements KeyListener {
   //State variables
   private Frog richard; 
   private Vehicle car1;
-  private Lilypad lily;
+  private Lilypad lily1;
+  private Lilypad lily2;
+  private Lilypad lily3;
+  private Lilypad lily4;
+  private Lilypad lily5;
+  private Lilypad lily6;
+  private Lilypad lily7;
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
   
@@ -62,7 +68,13 @@ public class Main extends WindowController implements KeyListener {
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
      car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas);
      richard = new Frog(getImage("Images/froggy.gif"), canvas);  
-     lily = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 100, richard);
+     lily1 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 0, richard);
+     lily2 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 100, richard);
+     lily3 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 200, richard);
+     lily4 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 300, richard);
+     lily5 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 400, richard);
+     lily6 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 500, richard);
+     lily7 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 600, richard);
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
@@ -110,22 +122,46 @@ public class Main extends WindowController implements KeyListener {
 
     if (key == KeyEvent.VK_LEFT) {
         richard.hops("left");
-        lily.updateLily(canvas, 100);
+        lily1.updateLily(canvas, 0);
+        lily2.updateLily(canvas, 100);
+        lily3.updateLily(canvas, 200);
+        lily4.updateLily(canvas, 300);
+        lily5.updateLily(canvas, 400);
+        lily6.updateLily(canvas, 500);
+        lily7.updateLily(canvas, 600);
     }
 
     if (key == KeyEvent.VK_RIGHT) {
         richard.hops("right");
-        lily.updateLily(canvas, 100);
+        lily1.updateLily(canvas, 0);
+        lily2.updateLily(canvas, 100);
+        lily3.updateLily(canvas, 200);
+        lily4.updateLily(canvas, 300);
+        lily5.updateLily(canvas, 400);
+        lily6.updateLily(canvas, 500);
+        lily7.updateLily(canvas, 600);
     }
 
     if (key == KeyEvent.VK_UP) {
         richard.hops("up");
-        lily.updateLily(canvas, 100);
+        lily1.updateLily(canvas, 0);
+        lily2.updateLily(canvas, 100);
+        lily3.updateLily(canvas, 200);
+        lily4.updateLily(canvas, 300);
+        lily5.updateLily(canvas, 400);
+        lily6.updateLily(canvas, 500);
+        lily7.updateLily(canvas, 600);
     }
 
     if (key == KeyEvent.VK_DOWN) {
         richard.hops("down");
-        lily.updateLily(canvas, 100);
+        lily1.updateLily(canvas, 0);
+        lily2.updateLily(canvas, 100);
+        lily3.updateLily(canvas, 200);
+        lily4.updateLily(canvas, 300);
+        lily5.updateLily(canvas, 400);
+        lily6.updateLily(canvas, 500);
+        lily7.updateLily(canvas, 600);
     }
   }
         

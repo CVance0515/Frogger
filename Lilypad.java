@@ -21,8 +21,5 @@ public class Lilypad{
     if(lilyImg.overlaps(Richard.getVisibleImage())){
       lilyImg.setImage(lilyF);
     }
-    else{
-      System.out.println("Not on lily");
-    }
   }
 }
