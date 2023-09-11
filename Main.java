@@ -38,7 +38,7 @@ public class Main extends WindowController implements KeyListener {
   
    
    public static void main(String[] args) { 
-   new Main().startController(700,400); 
+   new Main().startController(700,470); 
 	} 
    
    public void begin()
