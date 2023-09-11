@@ -10,7 +10,7 @@ public class Frog {
   private int lives = 3;
   private boolean alive = true;
   public Frog(Image i, DrawingCanvas c){
-    frogImg = new VisibleImage(i, new Location(10,10), c);
+    frogImg = new VisibleImage(i, new Location(310,360), c);
   }
   public boolean overlaps(VisibleImage vehicleImg){
     return frogImg.overlaps(vehicleImg);
@@ -44,6 +44,7 @@ public class Frog {
     if( !alive && lives > 0){
       lives--;
       alive = true;
+      frogImg.moveTo(310,360);
     }
     if( !alive && lives == 0){
       
