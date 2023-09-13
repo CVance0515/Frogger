@@ -9,8 +9,11 @@ public class Frog {
   private static final double FROG_HEIGHT = 48;
   private int lives = 3;
   private boolean alive = true;
+  private boolean loser = false;
+DrawingCanvas c;
   public Frog(Image i, DrawingCanvas c){
     frogImg = new VisibleImage(i, new Location(310,360), c);
+    this.c = c;
   }
   public boolean overlaps(VisibleImage vehicleImg){
     return frogImg.overlaps(vehicleImg);
@@ -40,6 +43,9 @@ public class Frog {
           frogImg.move(0,70);
         }
       }
+      if(direction.equals("die")){
+        alive = false;
+      }
     }
     if( !alive && lives > 0){
       lives--;
@@ -47,7 +53,9 @@ public class Frog {
       frogImg.moveTo(310,360);
     }
     if( !alive && lives == 0){
-      
+      c.clear();
     }
   }
+
+  
 }
