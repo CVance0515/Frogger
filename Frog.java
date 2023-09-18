@@ -21,6 +21,10 @@ DrawingCanvas c;
   public VisibleImage getVisibleImage(){
     return frogImg;
   }
+  public void die(){
+    lives--;
+    alive=false;
+  }
   public void hops(String direction){
     if(alive){
       if(direction.equals("left")){
@@ -46,14 +50,16 @@ DrawingCanvas c;
       if(direction.equals("die")){
         alive = false;
       }
+      System.out.println(lives);
     }
     if( !alive && lives > 0){
-      lives--;
       alive = true;
       frogImg.moveTo(310,360);
+      System.out.println(lives);
     }
     if( !alive && lives == 0){
       c.clear();
+      System.out.println(lives);
     }
   }
 
