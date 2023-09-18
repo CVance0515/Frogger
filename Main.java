@@ -1,7 +1,7 @@
 import objectdraw.*;
 import java.awt.event.*;
 import java.awt.Color;
-
+import java.util.*;
 
 public class Main extends WindowController implements KeyListener {
 
@@ -24,19 +24,9 @@ public class Main extends WindowController implements KeyListener {
    private static final double DASH_SPACING = DASH_LENGTH / 2;
 
   //State variables
-  private Frog richard; 
+  private Frog richard;
   private Vehicle car1;
-  private Lilypad lily1;
-  private Lilypad lily2;
-  private Lilypad lily3;
-  private Lilypad lily4;
-  private Lilypad lily5;
-  private Lilypad lily6;
-  private Lilypad lily7;
-   // This method currently just draws the highway.  You will have to add
-   // instructions to create the frog and the Lane ActiveObjects.
-  
-   
+  private ArrayList<Lilypad> lilypads = new ArrayList<Lilypad>();
    public static void main(String[] args) { 
    new Main().startController(700,470); 
 	} 
@@ -67,14 +57,10 @@ public class Main extends WindowController implements KeyListener {
       
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
      car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas);
-     richard = new Frog(getImage("Images/froggy.gif"), canvas);  
-     lily1 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 0, richard);
-     lily2 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 100, richard);
-     lily3 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 200, richard);
-     lily4 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 300, richard);
-     lily5 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 400, richard);
-     lily6 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 500, richard);
-     lily7 = new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, 600, richard);
+     richard = new Frog(getImage("Images/froggy.gif"), canvas);
+     for(int i = 0; i < 7; i++){
+       lilypads.add(new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, i * 100, richard));
+     }
    }
    
    // Draws a pair of solid yellow lines to represent a no passing divider between lanes
@@ -122,46 +108,30 @@ public class Main extends WindowController implements KeyListener {
 
     if (key == KeyEvent.VK_LEFT || key == KeyEvent.VK_A) {
         richard.hops("left");
-        lily1.updateLily(canvas, 0);
-        lily2.updateLily(canvas, 100);
-        lily3.updateLily(canvas, 200);
-        lily4.updateLily(canvas, 300);
-        lily5.updateLily(canvas, 400);
-        lily6.updateLily(canvas, 500);
-        lily7.updateLily(canvas, 600);
+      for(int i = 0; i < 7; i++){
+        lilypads.get(i).updateLily(canvas, i*100);
+      }
     }
 
     if (key == KeyEvent.VK_RIGHT || key == KeyEvent.VK_D) {
         richard.hops("right");
-        lily1.updateLily(canvas, 0);
-        lily2.updateLily(canvas, 100);
-        lily3.updateLily(canvas, 200);
-        lily4.updateLily(canvas, 300);
-        lily5.updateLily(canvas, 400);
-        lily6.updateLily(canvas, 500);
-        lily7.updateLily(canvas, 600);
+        for(int i = 0; i < 7; i++){
+        lilypads.get(i).updateLily(canvas, i*100);
+      }
     }
 
     if (key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
         richard.hops("up");
-        lily1.updateLily(canvas, 0);
-        lily2.updateLily(canvas, 100);
-        lily3.updateLily(canvas, 200);
-        lily4.updateLily(canvas, 300);
-        lily5.updateLily(canvas, 400);
-        lily6.updateLily(canvas, 500);
-        lily7.updateLily(canvas, 600);
+       for(int i = 0; i < 7; i++){
+        lilypads.get(i).updateLily(canvas, i*100);
+      }
     }
 
     if (key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {
         richard.hops("down");
-        lily1.updateLily(canvas, 0);
-        lily2.updateLily(canvas, 100);
-        lily3.updateLily(canvas, 200);
-        lily4.updateLily(canvas, 300);
-        lily5.updateLily(canvas, 400);
-        lily6.updateLily(canvas, 500);
-        lily7.updateLily(canvas, 600);
+        for(int i = 0; i < 7; i++){
+        lilypads.get(i).updateLily(canvas, i*100);
+      }
     }
   }
         
