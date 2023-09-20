@@ -104,6 +104,9 @@ public class Main extends WindowController implements KeyListener {
       richard.hops("up");
       for(int i = 0; i < 7; i++){
         lilypads.get(i).updateLily(canvas, i*100);
+        if(lilypads.get(i).overlaps(richard.getVisibleImage())){
+          richard.reset();
+        }
       }
     }
     if (key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {

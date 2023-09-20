@@ -9,6 +9,7 @@ public class Lilypad{
   private int lilyX;
   private Frog Richard;
   private Image lilyF;
+  boolean hasFrog;
   //Lilypad constructor
   public Lilypad(Image i, Image lilyFrog, DrawingCanvas c, int x, Frog richard){
     lilyImg = new VisibleImage(i, new Location(x, 10), 100, 60, c);
@@ -17,9 +18,12 @@ public class Lilypad{
     lilyF = lilyFrog;
   }
 
-  public void updateLily(DrawingCanvas c, int x){
+  public boolean updateLily(DrawingCanvas c, int x){
+    hasFrog = false;
     if(lilyImg.overlaps(Richard.getVisibleImage())){
       lilyImg.setImage(lilyF);
+      boolean hasFrog = true;
     }
+    return hasFrog;
   }
 }
