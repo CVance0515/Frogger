@@ -62,6 +62,12 @@ DrawingCanvas c;
       System.out.println(lives);
     }
   }
+  public void reset(){
+    frogImg.moveTo(310,360);
+  }
+  public void dead(){
+    
+  }
 
   
 }
