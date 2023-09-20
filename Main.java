@@ -92,19 +92,25 @@ public class Main extends WindowController implements KeyListener {
       richard.hops("left");
       for(int i = 0; i < 7; i++){
         lilypads.get(i).updateLily(canvas, i*100);
+        if(lilypads.get(i).updateLily(canvas, i*100) == true){
+          richard.reset();
+        }
       }
     }
     if (key == KeyEvent.VK_RIGHT || key == KeyEvent.VK_D) {
       richard.hops("right");
       for(int i = 0; i < 7; i++){
         lilypads.get(i).updateLily(canvas, i*100);
+        if(lilypads.get(i).updateLily(canvas, i*100) == true){
+          richard.reset();
+        }
       }
     }
     if (key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
       richard.hops("up");
       for(int i = 0; i < 7; i++){
         lilypads.get(i).updateLily(canvas, i*100);
-        if(lilypads.get(i).overlaps(richard.getVisibleImage())){
+        if(lilypads.get(i).updateLily(canvas, i*100) == true){
           richard.reset();
         }
       }
@@ -113,6 +119,9 @@ public class Main extends WindowController implements KeyListener {
       richard.hops("down");
       for(int i = 0; i < 7; i++){
         lilypads.get(i).updateLily(canvas, i*100);
+        if(lilypads.get(i).updateLily(canvas, i*100) == true){
+          richard.reset();
+        }
       }
     }
     if (key == KeyEvent.VK_Y) {
