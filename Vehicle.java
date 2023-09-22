@@ -10,12 +10,14 @@ public class Vehicle extends ActiveObject{
   private double firstTime;
   private double finalTime;
   private double velo;
+  private Frog Richard;
   
 
   public Vehicle(Image i, DrawingCanvas c, double xLoc, double yLoc, double velocity, int maxDist, Frog frogVar) {
     vehicleImg = new VisibleImage(i, new Location(550,70), c);
 
     velo = velocity;
+    Richard = frogVar;
     
     
     this.start();
@@ -38,7 +40,7 @@ public class Vehicle extends ActiveObject{
   }
   
   public void run() {
-    while(vehicleImg.getX() > -100 && vehicleImg.getX() < 800) {
+    while(vehicleImg.getX() > -150 && vehicleImg.getX() < 800) {
       firstTime = System.currentTimeMillis();
       wait(30);
       finalTime = System.currentTimeMillis() - firstTime;
@@ -47,7 +49,11 @@ public class Vehicle extends ActiveObject{
       //System.out.println(distance);
       vehicleImg.move(distance,0);
       // vehicleImg.move(-5,0);
-      
+      if(vehicleImg.overlaps(Richard.getVisibleImage())) {
+        Richard.die();
+        wait(1000);
+        
+      }
     }
   }
 }
