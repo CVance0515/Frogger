@@ -5,7 +5,7 @@ import java.awt.Image;
 
 public class Frog {
   
-  private VisibleImage frogImg;
+  private static VisibleImage frogImg;
   private static final double FROG_HEIGHT = 48;
   private int lives = 3;
   private boolean alive = true;
@@ -21,7 +21,14 @@ DrawingCanvas c;
   public VisibleImage getVisibleImage(){
     return frogImg;
   }
+  public static void reset(){
+    frogImg.moveTo(310,360);
+  }
+  public void dead(){
+    
+  }
   public void die(){
+    Frog.reset();
     lives--;
     alive=false;
   }
@@ -54,7 +61,7 @@ DrawingCanvas c;
     }
     if( !alive && lives > 0){
       alive = true;
-      frogImg.moveTo(310,360);
+      
       System.out.println(lives);
     }
     if( !alive && lives == 0){
@@ -62,12 +69,7 @@ DrawingCanvas c;
       System.out.println(lives);
     }
   }
-  public void reset(){
-    frogImg.moveTo(310,360);
-  }
-  public void dead(){
-    
-  }
+  
 
   
 }
