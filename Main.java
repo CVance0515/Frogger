@@ -90,39 +90,20 @@ public class Main extends WindowController implements KeyListener {
     int key = e.getKeyCode();
     if (key == KeyEvent.VK_LEFT || key == KeyEvent.VK_A) {
       richard.hops("left");
-      for(int i = 0; i < 7; i++){
-        lilypads.get(i).updateLily(canvas, i*100);
-        if(lilypads.get(i).updateLily(canvas, i*100) == true){
-          richard.reset();
-        }
-      }
     }
     if (key == KeyEvent.VK_RIGHT || key == KeyEvent.VK_D) {
       richard.hops("right");
-      for(int i = 0; i < 7; i++){
-        lilypads.get(i).updateLily(canvas, i*100);
-        if(lilypads.get(i).updateLily(canvas, i*100) == true){
-          richard.reset();
-        }
-      }
     }
     if (key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
       richard.hops("up");
       for(int i = 0; i < 7; i++){
-        lilypads.get(i).updateLily(canvas, i*100);
-        if(lilypads.get(i).updateLily(canvas, i*100) == true){
+        if(lilypads.get(i).updateLily(canvas, i*100)){
           richard.reset();
         }
       }
     }
     if (key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {
       richard.hops("down");
-      for(int i = 0; i < 7; i++){
-        lilypads.get(i).updateLily(canvas, i*100);
-        if(lilypads.get(i).updateLily(canvas, i*100) == true){
-          richard.reset();
-        }
-      }
     }
     if (key == KeyEvent.VK_Y) {
         richard.die();
