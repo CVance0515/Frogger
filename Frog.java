@@ -32,27 +32,45 @@ DrawingCanvas c;
     lives--;
     alive=false;
   }
-  public void hops(String direction){
+  public int hops(String direction){
     if(alive){
       if(direction.equals("left")){
+        if(frogImg.getY() == 10){
+          Frog.reset();
+          return 0;
+        }
         if(frogImg.getX() != 10){
           frogImg.move(-100,0);
         }
+        return 0;
       }
       if(direction.equals("right")){
+        if(frogImg.getY() == 10){
+          Frog.reset();
+          return 0;
+        }
         if(frogImg.getX() != 610){
           frogImg.move(100,0);
         }
+        return 0;
       }
       if(direction.equals("up")){
         if(frogImg.getY() != 10){
           frogImg.move(0,-70);
         }
+        else{
+          Frog.reset();
+        }
+        return 0;
       }
       if(direction.equals("down")){
+        if(frogImg.getY() == 10){
+          Frog.reset();
+        }
         if(frogImg.getY() != 360){
           frogImg.move(0,70);
         }
+        return 0;
       }
       if(direction.equals("die")){
         alive = false;
@@ -68,6 +86,7 @@ DrawingCanvas c;
       c.clear();
       System.out.println(lives);
     }
+    return 0;
   }
   
 
