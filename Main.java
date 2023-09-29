@@ -25,6 +25,10 @@ public class Main extends WindowController implements KeyListener {
   //State variables
   private Frog richard;
   private Vehicle car1;
+  private Lane lane1;
+  private Lane lane2;
+  private Lane lane3;
+  private Lane lane4;
   private ArrayList<Lilypad> lilypads = new ArrayList<Lilypad>();
   
   public static void main(String[] args) { 
@@ -50,7 +54,11 @@ public class Main extends WindowController implements KeyListener {
     // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
      
     richard = new Frog(getImage("Images/froggy.gif"), canvas); 
-    car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas, 550.0, 70.0, -1, 650, richard);
+    //car1 = new Vehicle(getImage("Images/taxi_left.gif"), canvas, 550.0, 70.0, -1, 650, richard);
+    lane1 = new Lane(getImage("Images/taxi_left.gif"), canvas, 550.0, 70.0, richard);
+    lane2 = new Lane(getImage("Images/taxi_left.gif"), canvas, 550.0, 140.0, richard);
+    lane3 = new Lane(getImage("Images/taxi_left.gif"), canvas, 550.0, 210.0, richard);
+    lane4 = new Lane(getImage("Images/taxi_left.gif"), canvas, 550.0, 280.0, richard);
     for(int i = 0; i < 7; i++){
     lilypads.add(new Lilypad(getImage("Images/lily.jpg"), getImage("Images/lilyFrog.jpg"), canvas, i * 100, richard));
   }

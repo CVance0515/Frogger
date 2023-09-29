@@ -14,7 +14,7 @@ public class Vehicle extends ActiveObject{
   
 
   public Vehicle(Image i, DrawingCanvas c, double xLoc, double yLoc, double velocity, int maxDist, Frog frogVar) {
-    vehicleImg = new VisibleImage(i, new Location(550,70), c);
+    vehicleImg = new VisibleImage(i, new Location(xLoc,yLoc), c);
 
     velo = velocity;
     Richard = frogVar;
