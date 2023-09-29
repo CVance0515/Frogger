@@ -97,9 +97,7 @@ public class Main extends WindowController implements KeyListener {
     if (key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
       richard.hops("up");
       for(int i = 0; i < 7; i++){
-        if(lilypads.get(i).updateLily(canvas, i*100)){
-          richard.reset();
-        }
+        lilypads.get(i).updateLily(canvas, i*100);
       }
     }
     if (key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {
